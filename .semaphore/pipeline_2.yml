@@ -1,0 +1,16 @@
+version: v1.0
+name: Pipeline 2
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - echo "job 1"
+      notify: null
+      webhook:
+        endpoint: 'https://outlook.office.com/webhook/defc5389-8acd-433a-8622-19d35ead4f5b@46e6803e-2aaf-42ea-8122-36858198d57e/Semaphore/e0735cb3ca4c48e5b8ed495639083e5e/481c2907-7ed2-48c4-bf0f-74781a109f9c'
